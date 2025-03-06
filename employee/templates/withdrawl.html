@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdrawal - Fetch Bank</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .withdrawal-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .withdrawal-section h2 {
+            font-size: 30px;
+            color: #333;
+        }
+        .withdrawal-form {
+            background-color: white;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .withdrawal-form label {
+            display: block;
+            text-align: left;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+        .withdrawal-form input[type="text"], 
+        .withdrawal-form input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .withdrawal-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .withdrawal-form button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 5px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Withdrawal - Fetch Bank</h1>
+    </header>
+
+    
+
+    <!-- Withdrawal Section -->
+    <div class="withdrawal-section">
+        <h2>Withdraw Funds From Your Account</h2>
+        <p>Please fill in the form below to request a withdrawal from your account.</p>
+
+        <!-- Withdrawal Form -->
+        <div class="withdrawal-form">
+            <form action="your-backend-url" method="post">
+			{%csrf_token %}
+                <label for="account-number">Account Number:</label>
+                <input type="text" id="account-number" name="account-number" required>
+
+                <label for="account-holder">Account Holder's Name:</label>
+                <input type="text" id="account-holder" name="account-holder" required>
+
+                <label for="withdraw-amount">Withdrawal Amount:</label>
+                <input type="number" id="withdraw-amount" name="withdraw-amount" required>
+
+                <label for="withdraw-date">Withdrawal Date:</label>
+                <input type="date" id="withdraw-date" name="withdraw-date" required>
+
+                <button type="submit">Withdrawal</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p> 2024 Fetch Bank. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

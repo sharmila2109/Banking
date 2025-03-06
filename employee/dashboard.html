@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .dashboard-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 40px;
+        }
+        .dashboard-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .dashboard-buttons a {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        .dashboard-buttons a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <h1>Admin Dashboard</h1>
+        <div class="dashboard-buttons">
+            <a href="create_account.html">Create Account</a>
+            <a href="view_accounts.html">View Accounts</a>
+            <a href="update_account.html">Update Account</a>
+            <a href="delete_account.html">Delete Account</a>
+            <a href="admin_login.html">Logout</a> <!-- Link to Admin Logout -->
+        </div>
+    </div>
+
+</body>
+</html>

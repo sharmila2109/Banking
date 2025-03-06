@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout Example</title>
+    <script>
+        function logout() {
+            // Send a request to the server to log out
+            fetch('/logout', {
+                method: 'POST',
+                credentials: 'include' // Ensure cookies are sent
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Redirect to login page or home page after successful logout
+                    window.location.href = '/homepage';
+                } else {
+                    alert('Logout failed. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error during logout:', error);
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to the Dashboard</h1>
+    <button onclick="logout()">Logout</button>
+</body>
+<body>
+<a href="success">SUCCESS_PAGE</a>
+<a href="homepage">HOME PAGE</a>
+</body>
+</html>
