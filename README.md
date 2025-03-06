@@ -12,7 +12,7 @@ A simple banking system designed to manage accounts, transactions, and balances.
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/sharmila2109/banking.git
+    git clone https://github.com/sharmila2109/banking
     ```
 
 2. Install dependencies:
